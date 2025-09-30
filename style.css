@@ -9,5 +9,9 @@ body {
 }
 
 main {
-  font-size: clamp(3rem, 12vw, 20rem);
+  font-size: clamp(1.75rem, 4vw, 4.5rem);
+  max-width: min(90vw, 60ch);
+  text-align: center;
+  padding: 1rem;
+  line-height: 1.2;
 }
