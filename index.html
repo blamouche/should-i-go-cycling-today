@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should I Go Cycling Today?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            overflow: hidden;
+            font-family: 'Arial Black', 'Arial Bold', sans-serif;
+        }
+
+        .yes-container {
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .yes-text {
+            font-size: 35vw;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            background: linear-gradient(
+                45deg,
+                #ff0080,
+                #ff8c00,
+                #40e0d0,
+                #ff0080,
+                #7928ca,
+                #ff0080
+            );
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease infinite;
+            text-shadow: 0 0 80px rgba(255, 0, 128, 0.5);
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .yes-text:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .yes-text {
+                font-size: 25vw;
+                letter-spacing: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .yes-text {
+                font-size: 22vw;
+                letter-spacing: 0;
+            }
+        }
+
+        /* Adjustments for very wide screens */
+        @media (min-aspect-ratio: 16/9) and (min-width: 1920px) {
+            .yes-text {
+                font-size: 25vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="yes-container">
+        <h1 class="yes-text">YES</h1>
+    </div>
+</body>
+</html>
